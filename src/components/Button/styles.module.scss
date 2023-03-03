@@ -1,0 +1,28 @@
+.container {
+  border-radius: 5px;
+  background-color: $primary;
+  color: $base-300;
+
+  &[data-button-variant='small'] {
+    padding: 12rem 25rem;
+    font-weight: 900;
+    font-size: 16rem;
+    line-height: 24rem;
+  }
+
+  &[data-button-variant='medium'] {
+    padding: 16rem 60rem;
+    font-weight: 600;
+    font-size: 18rem;
+    line-height: 27rem;
+  }
+
+  &[data-button-variant='large'] {
+    display: flex;
+    justify-content: center;
+    padding: 13rem 20rem;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
