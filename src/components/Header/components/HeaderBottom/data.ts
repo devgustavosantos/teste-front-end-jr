@@ -1,4 +1,4 @@
-import crownSimple from '../../../../assets/crown-simple.svg';
+import crownSimple from '../../../../assets/header/crown-simple.svg';
 
 type Link = {
   title: string;

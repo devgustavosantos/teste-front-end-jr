@@ -1,5 +1,4 @@
-
-import magnifyingGlass from '../../../../assets/magnifying-glass.svg';
+import magnifyingGlass from '../../../../assets/header/magnifying-glass.svg';
 import vtexLogo from '../../../../assets/vtex-logo.svg';
 import { links } from './data';
 import styles from './styles.module.scss';

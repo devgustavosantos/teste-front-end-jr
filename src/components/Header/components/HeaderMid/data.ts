@@ -1,7 +1,7 @@
-import box from '../../../../assets/box.svg';
-import heart from '../../../../assets/heart.svg';
-import shoppingCart from '../../../../assets/shopping-cart.svg';
-import userCircle from '../../../../assets/user-circle.svg';
+import box from '../../../../assets/header/box.svg';
+import heart from '../../../../assets/header/heart.svg';
+import shoppingCart from '../../../../assets/header/shopping-cart.svg';
+import userCircle from '../../../../assets/header/user-circle.svg';
 
 export const links = [
   { icon: box, title: 'Pedidos', alt: 'Desenho de uma caixa' },

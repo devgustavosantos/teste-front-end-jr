@@ -1,6 +1,6 @@
-import creditCard from '../../../../assets/credit-card.svg';
-import shieldCheck from '../../../../assets/shield-check.svg';
-import truck from '../../../../assets/truck.svg';
+import creditCard from '../../../../assets/header/credit-card.svg';
+import shieldCheck from '../../../../assets/header/shield-check.svg';
+import truck from '../../../../assets/header/truck.svg';
 import styles from './styles.module.scss';
 
 export function HeaderTop() {
