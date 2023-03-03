@@ -14,7 +14,7 @@ body,
 input,
 button,
 textarea {
-  color: $base-900;
+  color: $base-500;
   outline: none;
   font-size: 16rem;
   font-family: 'Poppins', sans-serif;
@@ -27,11 +27,6 @@ body {
   background-color: $base-300;
 }
 
-button,
-a {
-  cursor: pointer;
-}
-
 button {
   border: none;
   background-color: transparent;
@@ -39,4 +34,19 @@ button {
 
 a {
   text-decoration: none;
+}
+
+button,
+a {
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+button:hover,
+a:hover {
+  filter: brightness(0.9);
+}
+
+a:visited {
+  color: inherit;
 }
