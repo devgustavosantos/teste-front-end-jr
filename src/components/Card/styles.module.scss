@@ -1,0 +1,56 @@
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable scss/at-extend-no-missing-placeholder */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 270rem;
+  padding: 32rem 12rem 16rem;
+  border-radius: 10rem;
+  color: $base-700;
+  box-shadow: 0 3rem 19rem rgba(0, 0, 0, 22%);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.image {
+  height: 228rem;
+}
+
+.name {
+  margin-top: 9rem;
+  font-weight: 300;
+  font-size: 15rem;
+  line-height: 22rem;
+}
+
+.oldPrice {
+  margin-top: 12rem;
+  color: $base-500;
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 24rem;
+  text-decoration-line: line-through;
+}
+
+.newPrice {
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 30rem;
+}
+
+.installment {
+  font-weight: 400;
+  font-size: 12rem;
+  line-height: 18rem;
+}
+
+.freight {
+  margin-bottom: 12rem;
+  color: #f71963;
+
+  @extend .installment;
+}
