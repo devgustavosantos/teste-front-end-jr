@@ -1,0 +1,14 @@
+.container {
+  overflow: hidden;
+}
+
+.wrapperHome {
+  display: flex;
+  gap: clamp(20rem, 10rem + 7vw, 105rem);
+  justify-content: space-between;
+  margin: 70rem auto 60rem;
+
+  &:last-of-type {
+    margin-bottom: 155rem;
+  }
+}
