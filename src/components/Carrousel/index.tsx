@@ -25,9 +25,10 @@ export function Carrousel({ products }: CarrouselProps) {
         </button>
 
         <div className={styles.slider}>
-          {products.map((product) => (
+          {products.map((product, index) => (
             <Card
-              key={product.productName}
+              //ALTERAR A KEY PARA NÃO USAR O INDEX DO ARRAY!!!
+              key={index}
               productName={product.productName}
               photo={product.photo}
               price={product.price}

@@ -7,7 +7,7 @@ export function HeaderBottom() {
       <ul className={styles.list}>
         {links.map((link) => (
           <li
-            key={link.icon}
+            key={link.title}
             className={styles.listItem}
           >
             <a
