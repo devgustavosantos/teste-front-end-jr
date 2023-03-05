@@ -1,0 +1,15 @@
+.container {
+  padding: 59rem 0 42rem;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20rem;
+  justify-content: space-between;
+
+  @media (max-width: 1140px) {
+    flex-direction: column;
+    gap: 50rem;
+    align-items: center;
+  }
+}

@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  gap: 70rem;
+  justify-content: space-between;
+}
+
+.itemCentralizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titles {
+  margin-bottom: 24rem;
+  font-size: 13rem;
+  line-height: 20rem;
+  text-transform: uppercase;
+}
+
+.about {
+  display: grid;
+  grid-template-rows: 0.1fr 0.1fr 1fr;
+
+  .titles {
+    text-transform: capitalize;
+  }
+}
+
+.links {
+  font-weight: 300;
+  font-size: 12rem;
+  line-height: 32rem;
+  text-transform: uppercase;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 32rem;
+  align-self: flex-end;
+}
+
+.paymentMethods {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28rem;
+}
