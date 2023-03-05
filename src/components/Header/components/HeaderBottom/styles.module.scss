@@ -6,7 +6,7 @@
   display: flex;
   gap: 20rem;
   justify-content: space-between;
-  padding: 10rem 80rem;
+  padding: 10rem clamp(20rem, 8vw - 30rem, 80rem);
 }
 
 .listItem {
