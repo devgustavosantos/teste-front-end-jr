@@ -1,3 +1,4 @@
+import { Card } from '../Card';
 import { Carrousel } from '../Carrousel';
 import { Subcategories } from '../Subcategories';
 import { Wrapper } from '../Wrapper';
@@ -23,7 +24,17 @@ export function SectionProducts({ withSubcategories }: SectionTitleProps) {
           </a>
         )}
 
-        <Carrousel products={products} />
+        <Carrousel variant="products">
+          {products.map((product, index) => (
+            <Card
+              //ALTERAR A KEY PARA NÃO USAR O INDEX DO ARRAY!!!
+              key={index}
+              productName={product.productName}
+              photo={product.photo}
+              price={product.price}
+            />
+          ))}
+        </Carrousel>
       </Wrapper>
     </div>
   );

@@ -1,46 +1,45 @@
+import { ReactNode } from 'react';
+
 import arrow from '../../assets/arrow.svg';
-import { ProductInfos } from '../../types/product';
-import { Card } from '../Card';
 import styles from './styles.module.scss';
 
 type CarrouselProps = {
-  products: ProductInfos[];
+  children: ReactNode;
+  variant: 'products' | 'brands';
 };
 
 const arrowDescription = 'Desenho de uma flecha apontada para ';
+const firstItem = true;
+const lastItem = false;
 
-export function Carrousel({ products }: CarrouselProps) {
+export function Carrousel({ children, variant }: CarrouselProps) {
   return (
     <div className={styles.container}>
       <button
-        className={styles.buttons}
+        className={`${styles.buttons} ${styles[variant]} ${
+          variant === 'brands' && firstItem ? styles.hidden : ''
+        }`}
         title={`${arrowDescription} esquerda.`}
       >
         <img
           src={arrow}
           alt={`${arrowDescription} esquerda.`}
+          className={`${styles.arrow} ${styles[variant]}`}
         />
       </button>
 
-      <div className={styles.slider}>
-        {products.map((product, index) => (
-          <Card
-            //ALTERAR A KEY PARA NÃO USAR O INDEX DO ARRAY!!!
-            key={index}
-            productName={product.productName}
-            photo={product.photo}
-            price={product.price}
-          />
-        ))}
-      </div>
+      <div className={`${styles.slider} ${styles[variant]}`}>{children}</div>
 
       <button
-        className={styles.buttons}
+        className={`${styles.buttons} ${styles[variant]} ${
+          variant === 'brands' && lastItem ? styles.hidden : ''
+        }`}
         title={`${arrowDescription} direita.`}
       >
         <img
           src={arrow}
           alt={`${arrowDescription} direita.`}
+          className={`${styles.arrow} ${styles[variant]}`}
         />
       </button>
     </div>
