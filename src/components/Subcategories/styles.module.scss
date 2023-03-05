@@ -43,7 +43,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  &[data-variant-subcategory='current'] {
+  &.current {
     color: $primary;
     font-weight: 700;
   }

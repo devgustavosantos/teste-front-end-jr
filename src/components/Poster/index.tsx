@@ -9,10 +9,7 @@ type PosterProps = {
 
 export function Poster({ title, content, variant }: PosterProps) {
   return (
-    <div
-      className={styles.container}
-      data-variant-poster={variant}
-    >
+    <div className={`${styles.container} ${styles[variant]}`}>
       <h3 className={styles.title}>{title}</h3>
 
       <p className={styles.content}>{content}</p>

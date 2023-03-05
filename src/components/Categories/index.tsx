@@ -14,26 +14,20 @@ export function Categories() {
               <li key={card.title}>
                 <a
                   href="#"
-                  className={styles.link}
+                  className={
+                    card.title === currentCategory
+                      ? `${styles.link} ${styles.selected}`
+                      : styles.link
+                  }
                 >
                   <div className={styles.card}>
                     <img
                       src={card.icon}
                       alt={card.alt}
                       className={styles.image}
-                      data-image-variant={
-                        card.title === currentCategory && 'selected'
-                      }
                     />
                   </div>
-                  <p
-                    className={styles.title}
-                    data-title-variant={
-                      card.title === currentCategory && 'selected'
-                    }
-                  >
-                    {card.title}
-                  </p>
+                  <p className={styles.title}>{card.title}</p>
                 </a>
               </li>
             ))}

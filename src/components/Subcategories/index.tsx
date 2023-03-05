@@ -19,9 +19,10 @@ export function Subcategories() {
               >
                 <a
                   href="#"
-                  className={styles.link}
-                  data-variant-subcategory={
-                    subcategory === currentSubcategory && 'current'
+                  className={
+                    subcategory === currentSubcategory
+                      ? `${styles.link} ${styles.current}`
+                      : styles.link
                   }
                 >
                   {subcategory}

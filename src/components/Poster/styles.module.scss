@@ -8,12 +8,12 @@
     #fff url('/src/assets/poster-bg.jpg') no-repeat center center;
   color: $base-300;
 
-  &[data-variant-poster='large'] {
+  &.large {
     padding: 114rem 40rem 40rem;
     border-radius: 20px;
   }
 
-  &[data-variant-poster='middle'] {
+  &.middle {
     padding: 40rem;
     border-radius: 10px;
   }

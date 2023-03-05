@@ -9,8 +9,7 @@ export function Button({ title, variant }: ButtonProps) {
   return (
     <button
       type="button"
-      className={styles.container}
-      data-button-variant={variant}
+      className={`${styles.container} ${styles[variant]}`}
     >
       {title}
     </button>
