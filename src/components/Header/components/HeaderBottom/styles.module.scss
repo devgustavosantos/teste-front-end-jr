@@ -28,8 +28,8 @@
   line-height: 18rem;
   text-align: center;
   text-transform: uppercase;
-}
 
-.link[data-current-page='current'] {
-  color: $primary;
+  &.current {
+    color: $primary;
+  }
 }

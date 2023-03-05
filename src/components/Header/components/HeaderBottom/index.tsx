@@ -1,6 +1,8 @@
 import { links } from './data';
 import styles from './styles.module.scss';
 
+const currentLink = 'Ofertas do dia';
+
 export function HeaderBottom() {
   return (
     <nav className={styles.container}>
@@ -12,8 +14,11 @@ export function HeaderBottom() {
           >
             <a
               href="#"
-              className={styles.link}
-              data-current-page={link.title === 'Ofertas do dia' && 'current'}
+              className={
+                link.title === currentLink
+                  ? `${styles.link} ${styles.current}`
+                  : styles.link
+              }
             >
               {link.icon && (
                 <img
