@@ -2,6 +2,7 @@ import { useContext } from 'react';
 
 import { ProductModalContext } from '../../contexts/ProductModal';
 import { ProductInfos } from '../../types/product';
+import { formatOnMoney } from '../../utils/functions';
 
 export function useCard({
   productName,
@@ -11,24 +12,17 @@ export function useCard({
 }: ProductInfos) {
   const { onOpenModal } = useContext(ProductModalContext);
 
-  const priceFixed = Number(price.toFixed(2));
-  const priceFormatted = priceFixed.toLocaleString('pt-br', {
-    minimumFractionDigits: 2,
-  });
+  const priceFormatted = formatOnMoney(price);
 
   const addition = 10;
 
-  const oldPrice = Number(((price * addition) / 100 + price).toFixed(2));
-  const oldPriceFormatted = oldPrice.toLocaleString('pt-br', {
-    minimumFractionDigits: 2,
-  });
+  const oldPrice = (price * addition) / 100 + price;
+  const oldPriceFormatted = formatOnMoney(oldPrice);
 
   const installment = 12;
 
-  const installmentPrice = Number((price / installment).toFixed(2));
-  const installmentPriceFormatted = installmentPrice.toLocaleString('pt-br', {
-    minimumFractionDigits: 2,
-  });
+  const installmentPrice = price / installment;
+  const installmentPriceFormatted = formatOnMoney(installmentPrice);
 
   function handleOpenProductModal() {
     onOpenModal({

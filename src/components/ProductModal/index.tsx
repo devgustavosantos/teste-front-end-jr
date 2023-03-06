@@ -1,4 +1,5 @@
 import cruz from '../../assets/cruz.svg';
+import { formatOnMoney } from '../../utils/functions';
 import styles from './styles.module.scss';
 import { useProductModal } from './useProductModal';
 
@@ -31,7 +32,9 @@ export function ProductModal() {
         <div>
           <h4 className={styles.productName}>{currentProduct.productName}</h4>
 
-          <p className={styles.price}>R$ {currentProduct.price}</p>
+          <p className={styles.price}>
+            R$ {formatOnMoney(currentProduct.price)}
+          </p>
 
           <p className={styles.productDescription}>
             {currentProduct.descriptionShort}
