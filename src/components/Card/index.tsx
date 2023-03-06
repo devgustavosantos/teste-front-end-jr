@@ -14,10 +14,19 @@ export function Card({
     oldPriceFormatted,
     installment,
     installmentPriceFormatted,
-  } = useCard(price);
+    handleOpenProductModal,
+  } = useCard({
+    productName,
+    descriptionShort,
+    photo,
+    price,
+  });
 
   return (
-    <article className={styles.container}>
+    <article
+      className={styles.container}
+      onClick={handleOpenProductModal}
+    >
       <img
         src={photo}
         alt=""

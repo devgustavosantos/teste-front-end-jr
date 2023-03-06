@@ -1,6 +1,6 @@
 export type ProductInfos = {
   productName: string;
-  descriptionShort?: string;
+  descriptionShort: string;
   photo: string;
   price: number;
 };

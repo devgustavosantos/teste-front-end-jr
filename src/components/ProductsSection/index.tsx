@@ -34,6 +34,7 @@ export function ProductsSection({
             productName={product.productName}
             photo={product.photo}
             price={product.price}
+            descriptionShort={product.descriptionShort}
           />
         ))}
       </Carrousel>

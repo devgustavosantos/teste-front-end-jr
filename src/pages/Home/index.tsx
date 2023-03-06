@@ -5,6 +5,7 @@ import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { Poster } from '../../components/Poster';
+import { ProductModal } from '../../components/ProductModal';
 import { ProductsSection } from '../../components/ProductsSection';
 import { Wrapper } from '../../components/Wrapper';
 import { productsPlaceholder } from './data';
@@ -12,7 +13,7 @@ import styles from './styles.module.scss';
 import { useHome } from './useHome';
 
 export function Home() {
-  const { products, isLoading } = useHome();
+  const { products, isLoading, isProductModalOpen } = useHome();
 
   return (
     <>
@@ -70,6 +71,8 @@ export function Home() {
 
         <Footer />
       </div>
+
+      {isProductModalOpen && <ProductModal />}
     </>
   );
 }

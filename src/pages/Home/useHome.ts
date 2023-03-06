@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import { useQuery } from 'react-query';
 
+import { ProductModalContext } from '../../contexts/ProductModal';
 import { api } from '../../services/api';
 
 export function useHome() {
+  const { isProductModalOpen } = useContext(ProductModalContext);
+
   async function getProducts() {
     const response = await api.get('');
 
@@ -16,5 +20,5 @@ export function useHome() {
     queryFn: getProducts,
   });
 
-  return { products, isLoading };
+  return { products, isLoading, isProductModalOpen };
 }

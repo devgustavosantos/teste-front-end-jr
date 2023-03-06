@@ -1,19 +1,19 @@
 import cruz from '../../assets/cruz.svg';
-import { ProductInfos } from '../../types/product';
 import styles from './styles.module.scss';
+import { useProductModal } from './useProductModal';
 
-export function ProductModal({
-  productName,
-  descriptionShort,
-  photo,
-  price,
-}: ProductInfos) {
+export function ProductModal() {
+  const { currentProduct, handleCloseProductModal } = useProductModal();
+
+  if (!currentProduct) return <div />;
+
   return (
     <div className={styles.container}>
       <div className={styles.centerBox}>
         <button
           title="Botão de Fechar o modal."
           className={styles.button}
+          onClick={handleCloseProductModal}
         >
           <img
             src={cruz}
@@ -23,17 +23,19 @@ export function ProductModal({
         </button>
 
         <img
-          src={photo}
+          src={currentProduct.photo}
           alt=""
           className={styles.productPhoto}
         />
 
         <div>
-          <h4 className={styles.productName}>{productName}</h4>
+          <h4 className={styles.productName}>{currentProduct.productName}</h4>
 
-          <p className={styles.price}>R$ {price}</p>
+          <p className={styles.price}>R$ {currentProduct.price}</p>
 
-          <p className={styles.productDescription}>{descriptionShort}</p>
+          <p className={styles.productDescription}>
+            {currentProduct.descriptionShort}
+          </p>
 
           <a
             href="#"
