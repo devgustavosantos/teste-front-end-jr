@@ -33,7 +33,8 @@
       "vh",
       "ms",
       "fr",
-      "vw"
+      "vw",
+      "turn"
     ],
     "order/order": [
       [
