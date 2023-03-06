@@ -1,15 +1,19 @@
+import { ProductInfos } from '../../types/product';
 import { Card } from '../Card';
 import { Carrousel } from '../Carrousel';
 import { Subcategories } from '../Subcategories';
 import { Wrapper } from '../Wrapper';
-import { products } from './data';
 import styles from './styles.module.scss';
 
 type SectionTitleProps = {
   withSubcategories: boolean;
+  products: ProductInfos[];
 };
 
-export function ProductsSection({ withSubcategories }: SectionTitleProps) {
+export function ProductsSection({
+  withSubcategories,
+  products,
+}: SectionTitleProps) {
   return (
     <Wrapper>
       <h2 className={styles.title}>Produtos relacionados</h2>
@@ -24,10 +28,9 @@ export function ProductsSection({ withSubcategories }: SectionTitleProps) {
       )}
 
       <Carrousel variant="products">
-        {products.map((product, index) => (
+        {products.map((product) => (
           <Card
-            //ALTERAR A KEY PARA NÃO USAR O INDEX DO ARRAY!!!
-            key={index}
+            key={product.productName}
             productName={product.productName}
             photo={product.photo}
             price={product.price}
