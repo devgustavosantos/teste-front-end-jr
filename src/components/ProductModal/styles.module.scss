@@ -1,0 +1,74 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20rem;
+  background-color: rgba(0, 0, 0, 54%);
+}
+
+.centerBox {
+  position: relative;
+  display: flex;
+  gap: 87rem;
+  max-width: 770px;
+  padding: 54rem 56rem;
+  background-color: $base-300;
+  color: $secondary;
+  font-family: Lato, sans-serif;
+}
+
+.button {
+  position: absolute;
+  top: 16rem;
+  right: 32rem;
+  line-height: 0;
+}
+
+.buttonPhoto {
+  width: 16rem;
+  height: 16rem;
+}
+
+.productPhoto {
+  object-fit: contain;
+  width: 247rem;
+  height: 192rem;
+}
+
+.productName {
+  font-weight: 400;
+  font-size: 20rem;
+  line-height: 100%;
+}
+
+.price {
+  margin-top: 21rem;
+  font-weight: 900;
+  font-size: 20rem;
+  line-height: 100%;
+}
+
+.productDescription {
+  margin-top: 17rem;
+  color: $base-900;
+  font-weight: 400;
+  font-size: 10rem;
+  line-height: 15rem;
+  letter-spacing: 0.05em;
+}
+
+.seeMoreInfo {
+  display: flex;
+  gap: 5rem;
+  align-items: flex-end;
+  margin-top: 14rem;
+
+  &::after {
+    content: '>';
+  }
+}
