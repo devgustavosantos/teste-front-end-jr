@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import arrow from '../../assets/arrow.svg';
+import { arrowDescription } from './data';
 import styles from './styles.module.scss';
 import { useCarrousel } from './useCarrousel';
 
@@ -9,18 +10,20 @@ type CarrouselProps = {
   variant: 'products' | 'brands';
 };
 
-const arrowDescription = 'Desenho de uma flecha apontada para ';
-const firstItem = true;
-const lastItem = false;
-
 export function Carrousel({ children, variant }: CarrouselProps) {
-  const { carousel, handleCarouselLeft, handleCarouselRight } = useCarrousel();
+  const {
+    carousel,
+    firstItemOfCarrousel,
+    lastItemOfCarrousel,
+    handleCarouselLeft,
+    handleCarouselRight,
+  } = useCarrousel();
 
   return (
     <div className={styles.container}>
       <button
         className={`${styles.buttons} ${styles[variant]} ${
-          variant === 'brands' && firstItem ? styles.hidden : ''
+          variant === 'brands' && firstItemOfCarrousel ? styles.disabled : ''
         }`}
         title={`${arrowDescription} esquerda.`}
         onClick={handleCarouselLeft}
@@ -41,7 +44,7 @@ export function Carrousel({ children, variant }: CarrouselProps) {
 
       <button
         className={`${styles.buttons} ${styles[variant]} ${
-          variant === 'brands' && lastItem ? styles.hidden : ''
+          variant === 'brands' && lastItemOfCarrousel ? styles.disabled : ''
         }`}
         title={`${arrowDescription} direita.`}
         onClick={handleCarouselRight}

@@ -6,6 +6,6 @@ type BrandInfos = {
   url?: string;
 };
 
-export const brands: BrandInfos[] = new Array(10).fill({
+export const brands: BrandInfos[] = new Array(15).fill({
   image: vtexLogo,
 });

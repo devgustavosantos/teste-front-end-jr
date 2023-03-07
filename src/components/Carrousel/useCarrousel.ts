@@ -1,7 +1,37 @@
-import { MouseEvent, useRef } from 'react';
+import { MouseEvent, useRef, useState } from 'react';
 
 export function useCarrousel() {
+  const [currentItemOfCarousel, setCurrentItemOfCarousel] = useState(1);
+
   const carousel = useRef<HTMLDivElement>(null);
+
+  let itemsOfCarrouselAmount: number | undefined;
+  let firstItemOfCarrousel: boolean | undefined;
+  let lastItemOfCarrousel: boolean | undefined;
+
+  if (carousel.current) {
+    itemsOfCarrouselAmount = carousel.current.childNodes.length;
+    firstItemOfCarrousel = currentItemOfCarousel === 1;
+    lastItemOfCarrousel = currentItemOfCarousel === itemsOfCarrouselAmount;
+  }
+
+  function increscentCurrentItemOfCarousel() {
+    if (!itemsOfCarrouselAmount) return;
+
+    if (currentItemOfCarousel >= itemsOfCarrouselAmount) {
+      return setCurrentItemOfCarousel(itemsOfCarrouselAmount);
+    }
+
+    return setCurrentItemOfCarousel((state) => state + 1);
+  }
+
+  function decrescentCurrentItemOfCarousel() {
+    if (currentItemOfCarousel <= 1) {
+      return setCurrentItemOfCarousel(1);
+    }
+
+    return setCurrentItemOfCarousel((state) => state - 1);
+  }
 
   function getCardWidth() {
     if (!carousel.current) return;
@@ -30,6 +60,8 @@ export function useCarrousel() {
     if (!size) return;
 
     carousel.current.scrollLeft += size;
+
+    increscentCurrentItemOfCarousel();
   }
 
   function handleCarouselLeft(event: MouseEvent<HTMLButtonElement>) {
@@ -42,7 +74,15 @@ export function useCarrousel() {
     if (!size) return;
 
     carousel.current.scrollLeft -= size;
+
+    decrescentCurrentItemOfCarousel();
   }
 
-  return { carousel, handleCarouselLeft, handleCarouselRight };
+  return {
+    carousel,
+    firstItemOfCarrousel,
+    lastItemOfCarrousel,
+    handleCarouselLeft,
+    handleCarouselRight,
+  };
 }
