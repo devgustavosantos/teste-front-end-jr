@@ -1,0 +1,35 @@
+.container {
+  box-shadow: 0 8px 16px rgba(57, 48, 19, 12%);
+}
+
+.list {
+  display: flex;
+  gap: 20rem;
+  justify-content: space-between;
+  padding: 10rem clamp(20rem, 8vw - 30rem, 80rem);
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 20rem;
+  height: 20rem;
+}
+
+.link {
+  display: flex;
+  gap: 12rem;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 18rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  &.current {
+    color: $primary;
+  }
+}

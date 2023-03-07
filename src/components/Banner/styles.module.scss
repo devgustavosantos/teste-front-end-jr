@@ -1,0 +1,26 @@
+.container {
+  object-fit: cover;
+  padding: 50rem 0;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0%) 0%,
+      rgba(0, 0, 0, 90%) 100%
+    ),
+    #fff url('/src/assets/banner.jpg') no-repeat center center;
+  background-size: cover;
+  color: $base-300;
+}
+
+.callToAction {
+  max-width: 822rem;
+  font-weight: 600;
+  font-size: 48rem;
+  line-height: 72rem;
+}
+
+.info {
+  margin-bottom: 36rem;
+  font-weight: 600;
+  font-size: 36rem;
+  line-height: 54rem;
+}

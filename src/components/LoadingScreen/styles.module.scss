@@ -1,0 +1,55 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #00000040;
+  color: $base-400;
+  text-shadow: 0 0 5rem black;
+  backdrop-filter: blur(15px);
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    border: 5px solid $base-300;
+    border-top-color: $primary;
+    border-radius: 50%;
+    animation: rotating 1s infinite;
+  }
+
+  .loading {
+    animation: fade-out 1s 30s forwards;
+  }
+
+  .justMoment {
+    opacity: 0;
+    animation: fade-in 1s 30s forwards;
+  }
+
+  @keyframes rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+      transform: translateY(-150%);
+    }
+  }
+
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+}

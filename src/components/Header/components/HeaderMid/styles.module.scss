@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  gap: clamp(20rem, 15rem + 2vw, 75rem);
+  justify-content: space-between;
+  margin: auto;
+  padding: 12rem clamp(30rem, 25rem + 2vw, 56rem);
+  border-top: 1rem solid $base-400;
+  border-bottom: 1rem solid $base-400;
+}
+
+.centerItems {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: clamp(100rem, 80rem + 5vw, 139rem);
+}
+
+.searchBar {
+  display: flex;
+  flex-grow: 1;
+  gap: 10rem;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 310rem;
+  padding: 14rem 24rem;
+  border-radius: 10px;
+  background-color: $base-400;
+}
+
+.searchBarInput {
+  flex-grow: 1;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 21rem;
+}
+
+.searchBarButton {
+  line-height: 0;
+}
+
+.searchBarIcon {
+  width: clamp(20rem, 15rem + 0.9vw, 28rem);
+}
+
+.list {
+  display: flex;
+  gap: clamp(10rem, 5rem + 2vw, 32rem);
+}
+
+.navigationLogo {
+  width: clamp(25rem, 3rem + 2vw, 32rem);
+  height: clamp(25rem, 3rem + 2vw, 32rem);
+}

@@ -1,0 +1,30 @@
+.title {
+  color: $primary;
+  font-weight: 700;
+  font-size: 30rem;
+  line-height: 45rem;
+  text-align: center;
+}
+
+.carrousel {
+  display: flex;
+  gap: 40rem;
+  overflow-x: hidden;
+  margin-top: 52rem;
+}
+
+.brand {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 211rem;
+  height: 211rem;
+  border-radius: 50%;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 13%);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+}
