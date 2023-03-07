@@ -69,12 +69,17 @@
   overflow-x: hidden;
   width: 100%;
   padding: 15rem;
+  scroll-behavior: smooth;
 
   &.products {
-    gap: clamp(20rem, 15rem + 2vw, 62rem);
+    > *:not(:last-child) {
+      margin-right: clamp(20rem, 15rem + 2vw, 62rem);
+    }
   }
 
   &.brands {
-    gap: clamp(20rem, 15rem + 2vw, 40rem);
+    > *:not(:last-child) {
+      margin-right: clamp(20rem, 15rem + 2vw, 40rem);
+    }
   }
 }

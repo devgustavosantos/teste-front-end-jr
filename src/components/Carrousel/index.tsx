@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 
 import arrow from '../../assets/arrow.svg';
 import styles from './styles.module.scss';
+import { useCarrousel } from './useCarrousel';
 
 type CarrouselProps = {
   children: ReactNode;
@@ -13,6 +14,8 @@ const firstItem = true;
 const lastItem = false;
 
 export function Carrousel({ children, variant }: CarrouselProps) {
+  const { carousel, handleCarouselLeft, handleCarouselRight } = useCarrousel();
+
   return (
     <div className={styles.container}>
       <button
@@ -20,6 +23,7 @@ export function Carrousel({ children, variant }: CarrouselProps) {
           variant === 'brands' && firstItem ? styles.hidden : ''
         }`}
         title={`${arrowDescription} esquerda.`}
+        onClick={handleCarouselLeft}
       >
         <img
           src={arrow}
@@ -28,13 +32,19 @@ export function Carrousel({ children, variant }: CarrouselProps) {
         />
       </button>
 
-      <div className={`${styles.slider} ${styles[variant]}`}>{children}</div>
+      <div
+        className={`${styles.slider} ${styles[variant]}`}
+        ref={carousel}
+      >
+        {children}
+      </div>
 
       <button
         className={`${styles.buttons} ${styles[variant]} ${
           variant === 'brands' && lastItem ? styles.hidden : ''
         }`}
         title={`${arrowDescription} direita.`}
+        onClick={handleCarouselRight}
       >
         <img
           src={arrow}
