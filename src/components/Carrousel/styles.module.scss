@@ -9,12 +9,6 @@
   align-items: center;
   animation: fadein 0.4s;
 
-  &.disabled {
-    opacity: 0;
-    animation: fadeout 0.4s;
-    animation-fill-mode: forwards;
-  }
-
   &.products {
     top: 0;
     bottom: 0;
@@ -54,6 +48,14 @@
     &:last-child {
       right: clamp(15rem, 3vw - 4rem, 42rem);
       transform: translateY(-50%) rotate(180deg);
+    }
+
+    &.disabled {
+      overflow: hidden;
+      width: 0;
+      height: 0;
+      animation: fadeout 0.4s;
+      animation-fill-mode: forwards;
     }
 
     @keyframes fadein {
