@@ -1,3 +1,4 @@
+import { showAlertAboutDemoVersion } from '../../utils/alerts';
 import { subcategories } from './data';
 import styles from './styles.module.scss';
 
@@ -19,6 +20,7 @@ export function Subcategories() {
                   ? `${styles.link} ${styles.current}`
                   : styles.link
               }
+              onClick={showAlertAboutDemoVersion}
             >
               {subcategory}
             </a>

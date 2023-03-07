@@ -1,3 +1,4 @@
+import { showAlertAboutDemoVersion } from '../../../../utils/alerts';
 import { about, infos, paymentMethods, socialMedia } from './data';
 import styles from './styles.module.scss';
 
@@ -13,6 +14,7 @@ export function FooterListBlock() {
               <a
                 href="#"
                 className={`${styles.links}`}
+                onClick={showAlertAboutDemoVersion}
               >
                 {item}
               </a>
@@ -29,6 +31,7 @@ export function FooterListBlock() {
               <a
                 href="#"
                 className={`${styles.links} ${styles.itemCentralizer}`}
+                onClick={showAlertAboutDemoVersion}
               >
                 <img
                   src={media.image}
@@ -49,6 +52,7 @@ export function FooterListBlock() {
               <a
                 href="#"
                 className={styles.links}
+                onClick={showAlertAboutDemoVersion}
               >
                 {info}
               </a>

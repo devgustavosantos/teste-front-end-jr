@@ -1,3 +1,4 @@
+import { showAlertAboutDemoVersion } from '../../utils/alerts';
 import { Button } from '../Button';
 import styles from './styles.module.scss';
 
@@ -17,6 +18,7 @@ export function Poster({ title, content, variant }: PosterProps) {
       <Button
         title="Confira"
         variant="small"
+        onClick={showAlertAboutDemoVersion}
       />
     </div>
   );

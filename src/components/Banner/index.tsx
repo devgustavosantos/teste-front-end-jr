@@ -1,3 +1,4 @@
+import { showAlertAboutDemoVersion } from '../../utils/alerts';
 import { Button } from '../Button';
 import { Wrapper } from '../Wrapper';
 import styles from './styles.module.scss';
@@ -11,6 +12,7 @@ export function Banner() {
         <Button
           title="Ver produto"
           variant="medium"
+          onClick={showAlertAboutDemoVersion}
         />
       </Wrapper>
     </section>

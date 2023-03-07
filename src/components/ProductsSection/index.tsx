@@ -1,4 +1,5 @@
 import { ProductInfos } from '../../types/product';
+import { showAlertAboutDemoVersion } from '../../utils/alerts';
 import { Card } from '../Card';
 import { Carrousel } from '../Carrousel';
 import { Subcategories } from '../Subcategories';
@@ -22,6 +23,7 @@ export function ProductsSection({
         <a
           href="#"
           className={styles.link}
+          onClick={showAlertAboutDemoVersion}
         >
           Ver todos
         </a>

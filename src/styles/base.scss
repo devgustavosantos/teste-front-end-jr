@@ -51,3 +51,13 @@ a:hover {
 a:visited {
   color: inherit;
 }
+
+.swal2-popup {
+  font-size: 16rem !important;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: $primary !important;
+}

@@ -1,3 +1,4 @@
+import { showAlertAboutDemoVersion } from '../../../../utils/alerts';
 import { links } from './data';
 import styles from './styles.module.scss';
 
@@ -19,6 +20,7 @@ export function HeaderBottom() {
                   ? `${styles.link} ${styles.current}`
                   : styles.link
               }
+              onClick={showAlertAboutDemoVersion}
             >
               {link.icon && (
                 <img

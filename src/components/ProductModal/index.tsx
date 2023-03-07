@@ -1,4 +1,5 @@
 import cruz from '../../assets/cruz.svg';
+import { showAlertAboutDemoVersion } from '../../utils/alerts';
 import { formatOnMoney } from '../../utils/functions';
 import styles from './styles.module.scss';
 import { useProductModal } from './useProductModal';
@@ -43,6 +44,7 @@ export function ProductModal() {
           <a
             href="#"
             className={styles.seeMoreInfo}
+            onClick={showAlertAboutDemoVersion}
           >
             Veja mais detalhes do produto
           </a>

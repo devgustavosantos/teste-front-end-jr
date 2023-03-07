@@ -1,3 +1,4 @@
+import { showAlertAboutDemoVersion } from '../../../../utils/alerts';
 import { Button } from '../../../Button';
 import styles from './styles.module.scss';
 
@@ -23,6 +24,7 @@ export function FooterNewsletter() {
         <Button
           title="OK"
           variant="small"
+          onClick={showAlertAboutDemoVersion}
         />
       </div>
     </div>

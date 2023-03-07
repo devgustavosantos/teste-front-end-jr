@@ -1,3 +1,4 @@
+import { showAlertAboutDemoVersion } from '../../utils/alerts';
 import { Carrousel } from '../Carrousel';
 import { Wrapper } from '../Wrapper';
 import { brands } from './data';
@@ -17,6 +18,7 @@ export function Brands() {
             <a
               href="#"
               className={styles.link}
+              onClick={showAlertAboutDemoVersion}
             >
               <img
                 src={brand.image}

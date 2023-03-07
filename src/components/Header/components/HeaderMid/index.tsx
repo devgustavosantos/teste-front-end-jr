@@ -1,5 +1,6 @@
 import magnifyingGlass from '../../../../assets/header/magnifying-glass.svg';
 import vtexLogo from '../../../../assets/vtex-logo.svg';
+import { showAlertAboutDemoVersion } from '../../../../utils/alerts';
 import { links } from './data';
 import styles from './styles.module.scss';
 
@@ -9,6 +10,7 @@ export function HeaderMid() {
       <a
         href="#"
         className={styles.centerItems}
+        onClick={showAlertAboutDemoVersion}
       >
         <img
           src={vtexLogo}
@@ -26,6 +28,7 @@ export function HeaderMid() {
         <button
           title="Buscar"
           className={styles.searchBarButton}
+          onClick={showAlertAboutDemoVersion}
         >
           <img
             src={magnifyingGlass}
@@ -45,6 +48,7 @@ export function HeaderMid() {
               <a
                 href="#"
                 className={styles.centerItems}
+                onClick={showAlertAboutDemoVersion}
               >
                 <img
                   src={link.icon}

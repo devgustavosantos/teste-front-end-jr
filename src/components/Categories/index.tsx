@@ -1,3 +1,4 @@
+import { showAlertAboutDemoVersion } from '../../utils/alerts';
 import { Wrapper } from '../Wrapper';
 import { cards } from './data';
 import styles from './styles.module.scss';
@@ -19,6 +20,7 @@ export function Categories() {
                       ? `${styles.link} ${styles.selected}`
                       : styles.link
                   }
+                  onClick={showAlertAboutDemoVersion}
                 >
                   <div className={styles.card}>
                     <img
